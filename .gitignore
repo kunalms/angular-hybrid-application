@@ -1,2 +1,4 @@
 /.idea/
 /angularJS/app/dist/
+/node_modules/
+/dist/
