@@ -1,0 +1,22 @@
+{
+  "name": "angular-hybrid-application",
+  "version": "1.0.0",
+  "description": "Angular.js and Angular assignment:",
+  "main": "index.js",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "install:angular": "cd angular && npm i && cd ..",
+    "install:angularJs": "cd angularJS && npm i && cd ..",
+    "postinstall": "npm run install:angular && npm run install:angularJs",
+    "build:angular": "cd angular && npm run build && cd ..",
+    "build:angularJS": "cd angularJS && npm run build && cd ..",
+    "build": "npm run build:angular && npm run build:angularJS",
+    "start": "npm install && npm run build && http-server -a localhost -p 8000 -c-1 ./dist",
+    "dev": "npm run build && http-server -a localhost -p 8000 -c-1 ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
