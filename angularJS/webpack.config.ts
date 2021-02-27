@@ -5,7 +5,7 @@
 var path = require('path');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-var BUILD_DIR = './app/dist';
+var BUILD_DIR = '../dist';
 
 var ENV = 'production';
 

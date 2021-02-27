@@ -1,5 +1,5 @@
 import './app';
-import './view1/view1';
+import './login/login.component';
 import './register/register.component';
 
 
