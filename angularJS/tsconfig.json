@@ -1,0 +1,19 @@
+{
+  "include": [
+    "app/*.ts",
+    "app/**/*.ts"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "target": "es6",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "baseUrl": "."
+  }
+}
