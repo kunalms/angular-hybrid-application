@@ -21,6 +21,9 @@
       "dom"
     ]
   },
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
