@@ -1,11 +1,10 @@
 'use strict';
 
 function RegisterController() {
-  var vm = this;
 }
 
 var view1Component = {
-  templateUrl: 'register/register.html',
+  templateUrl: './register.html',
   controller: RegisterController,
   controllerAs: '$ctrl',
 };

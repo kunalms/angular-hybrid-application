@@ -1,11 +1,10 @@
 'use strict';
 
 function View1Controller() {
-    var vm = this;
 }
 
 var view1Component = {
-    templateUrl: 'view1/view1.html',
+    templateUrl: './view1.html',
     controller: View1Controller,
     controllerAs: '$ctrl',
 
