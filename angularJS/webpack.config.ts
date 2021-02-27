@@ -11,7 +11,7 @@ var ENV = 'production';
 
 module.exports = {
     entry: {
-        // 'ng1-vendor': './app/vendor.ts',
+        'ng1-vendor': './app/vendor.ts',
         'ng1-main': './app/main.ts'
     },
     output: {
@@ -21,9 +21,6 @@ module.exports = {
     resolve: {
         // Add '.ts' and '.js' as a resolvable extension.
         extensions: ['.ts', '.js']
-    },
-    optimization: {
-        minimize: false
     },
     module: {
         // this block specifies what loaders should be used when a file for specific format is encountered by webpack
