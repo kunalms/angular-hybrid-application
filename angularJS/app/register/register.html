@@ -1,1 +1,65 @@
-Register works
+<md-card md-theme="default" layout-padding>
+    <!--  Card Title  -->
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline">Register</span>
+        </md-card-title-text>
+    </md-card-title>
+
+    <!--  Form  -->
+    <form name="$ctrl.userForm" layout="column">
+        <div layout="row">
+            <!--  First Name  -->
+            <md-input-container>
+                <label>First Name</label>
+                <input name="firstName" ng-model="$ctrl.user.firstName" placeholder="Sam" required>
+                <div ng-if="$ctrl.userForm.firstName.$invalid && $ctrl.userForm.firstName.$touched"
+                     ng-messages="$ctrl.userForm.firstName.$error" md-auto-hide="true">
+                    <div ng-message="required" class="my-message">First Name is required.</div>
+                </div>
+            </md-input-container>
+            <!--  Last Name  -->
+            <md-input-container>
+                <label>Last Name</label>
+                <input name="lastName" ng-model="$ctrl.user.lastName" placeholder="Smith" required>
+                <div ng-if="$ctrl.userForm.lastName.$invalid && $ctrl.userForm.lastName.$touched"
+                     ng-messages="userForm.lastName.$error">
+                    <div ng-message="required" class="my-message">Last Name is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <!--  Email  -->
+        <md-input-container>
+            <label>Email</label>
+            <input type="email" name="email" ng-model="$ctrl.user.email" placeholder="abc@example.com" required>
+            <div ng-if="$ctrl.userForm.email.$invalid && $ctrl.userForm.email.$touched"
+                 ng-messages="userForm.email.$error" multiple>
+                <div ng-message="required" class="my-message">Email is required.</div>
+                <div ng-message="email" class="my-message">Please enter a valid email.</div>
+            </div>
+        </md-input-container>
+
+        <!--  Password  -->
+        <md-input-container>
+            <label>Password</label>
+            <input type="password" name="password" ng-model="$ctrl.user.password" required minlength="6">
+            <div ng-if="$ctrl.userForm.password.$invalid && $ctrl.userForm.password.$touched"
+                 ng-messages="userForm.password.$error">
+                <div ng-message="minlength" class="my-message">Password should have minimum <strong>6</strong>
+                    characters.
+                </div>
+                <div ng-message="required" class="my-message">Password is required.</div>
+            </div>
+        </md-input-container>
+
+        <!-- Date of Birth  -->
+        <dgd-date-picker [(date-of-birth)]="$ctrl.user.dateOfBirth"></dgd-date-picker>
+        <!-- Form Actions -->
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-raised md-primary" ng-disabled="$ctrl.userForm.$invalid" ng-click="$ctrl.submitForm()">
+                Register
+            </md-button>
+        </md-card-actions>
+    </form>
+</md-card>
+<pre>{{$ctrl.user|json}}</pre>

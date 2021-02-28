@@ -1,12 +1,16 @@
 'use strict';
 
-function RegisterController() {
+function RegisterController(dgdAlertService) {
+    var vm = this;
+
+    vm.submitForm = function () {
+        dgdAlertService.show("User registration with email "+ vm.user.email + " was successful!");
+    }
 }
 
 var view1Component = {
     templateUrl: './register.html',
-    controller: RegisterController,
-    controllerAs: '$ctrl',
+    controller: RegisterController
 };
 angular.module('myApp.register', ['ngRoute'])
     .component('registerComponent', view1Component)
