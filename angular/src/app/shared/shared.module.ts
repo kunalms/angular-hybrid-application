@@ -3,16 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [DatePickerComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
+    MaterialModule,
     ReactiveFormsModule
   ], exports: [
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule,
+    DatePickerComponent
   ]
 })
 export class SharedModule {
