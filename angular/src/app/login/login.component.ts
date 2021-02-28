@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertService } from '../core/services/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
   });
   dateOfBirth: Date = new Date();
 
-  constructor() {
+  constructor(private alertService: AlertService) {
   }
 
   ngOnInit(): void {
@@ -28,8 +29,6 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.dateOfBirth);
-    console.log(this.loginForm.controls['email'].value);
-    console.log(this.loginForm.controls['password'].value);
+    this.alertService.show('Login for user ' + this.loginForm.controls['email'].value + ' was successful!')
   }
 }
