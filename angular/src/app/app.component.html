@@ -1,1 +1,16 @@
-<div ng-view></div>
+<div fxFlexFill fxLayout="column">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row fxLayoutAlign="space-between center">
+      <div fxFlex="20">Angular Hybrid app</div>
+      <div>
+        <a mat-button href="#!/register">Register</a>
+        <a mat-button href="#!/login">Login</a>
+      </div>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div fxLayout="column" fxLayoutAlign="center center" fxFlex="calc(100% - 64px)" >
+    <div ng-view></div>
+  </div>
+
+</div>
