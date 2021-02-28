@@ -22,6 +22,9 @@ module.exports = {
         // Add '.ts' and '.js' as a resolvable extension.
         extensions: ['.ts', '.js']
     },
+    optimization: {
+        minimize: false
+    },
     module: {
         // this block specifies what loaders should be used when a file for specific format is encountered by webpack
         // while traversing through the project
