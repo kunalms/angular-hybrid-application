@@ -13,8 +13,8 @@
     "build:angular": "cd angular && npm run build && cd ..",
     "build:angularJS": "cd angularJS && npm run build && cd ..",
     "build": "npm run build:angular && npm run build:angularJS",
-    "start": "npm install && npm run build && http-server -a localhost -p 8000 -c-1 ./dist",
-    "dev": "npm run build && http-server -a localhost -p 8000 -c-1 ./dist",
+    "start": "npm install && npm run build && http-server -a localhost -p 8001 -c-1 ./dist",
+    "dev": "npm run build && http-server -a localhost -p 8001 -c-1 ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
