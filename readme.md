@@ -1,4 +1,14 @@
-Angular.js and Angular assignment: 
+### Steps to Run it locally:
+```
+$ git clone https://github.com/kunalms/angular-hybrid-application.git
+$ cd angular-hybrid-application/
+$ npm start
+```
+
+running the commands mentioned above will start the application at [localhost:8001](localhost:8001)
+
+
+### Angular.js and Angular Hybrid app: 
 
 This assignment is an angular.js + angular hybrid application. 
 Create a single page application with two routes (login and register) and a date picker directive. The login is an angular component and register 
@@ -32,3 +42,5 @@ You may:
 
 You should not:
   - Include Twitter Bootstrap or any other CSS frameworks for styling purposes.
+
+ 
